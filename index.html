@@ -1,0 +1,153 @@
+<html>
+	<head>
+		<title>Image Gallery</title>
+
+		<!-- import bootstrap -->
+		<link rel="stylesheet"
+			  type="text/css"
+			  href="bootstrap.css"
+		      />
+
+		<!-- import our own stylesheet -->
+		<link rel="stylesheet"
+			  type="text/css"
+			  href="styles.css"
+		      />	
+
+		<!-- import jQuery -->
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	</head>
+	<body>
+		<!-- some header info (from Shivanshu's code) -->
+		<a 
+		href="index.html">
+			Home
+		</a>
+		 &nbsp;
+		<a 
+		href="aboutme.html">
+			About me 
+		</a>
+		&nbsp;
+		<a 
+		href="contact.html" class="greenlink">
+			Contact me 
+		</a>
+
+		</hr>
+	<div class="container">
+		<h1>Image Gallery</h1>
+
+		<!--
+		   These are the thumbnail images.
+		   They are laid out using the 
+		   bootstrap grid.
+		   I have given them all the class
+		   "crop-image" which I use in the
+		   css and the javascript code.
+		-->
+		<div class="row">
+			<div class="col-md-3">
+				<img class="crop-img" 
+				  src="F:\Project Github\Web page for Motorcycle\Img 1.jpg" 
+				  alt="Avenger 450"/>
+			</div>	 
+			<div class="col-md-3">
+				<img class="crop-img" 
+				  src="F:\Project Github\Web page for Motorcycle\Img 2.jpg" 
+				  alt="Avenger 350"/>
+			</div>
+			<div class="col-md-3">
+				<img class="crop-img" 
+				  src="F:\Project Github\Web page for Motorcycle\Img 3.jpg" 
+				  alt="Haybussa 450"/>
+			</div>
+            <div class="col-md-3">
+				<img class="crop-img" 
+				  src="F:\Project Github\Web page for Motorcycle\Img 4.jpg" 
+				  alt="Pulsar 350"/>
+			</div>
+      </div>
+		
+		<div class="row">
+			<div class="col-md-3">
+				<img class="crop-img" 
+				  src="F:\Project Github\Web page for Motorcycle\Img 5.jpg" 
+				  alt="Bullet 450"/> 
+			</div>
+			<div class="col-md-3">
+				<img class="crop-img" 
+				  src="F:\Project Github\Web page for Motorcycle\Img 6.jpg" 
+				  alt="Mercedes 34"/> 
+			</div>
+			<div class="col-md-3">
+				<img class="crop-img" 
+				  src="F:\Project Github\Web page for Motorcycle\Img 7.jpg" 
+				  alt="Crystal 67"/> 
+			</div>
+			<div class="col-md-3">
+				<img class="crop-img" 
+				   src="F:\Project Github\Web page for Motorcycle\Img 8.jpg" 
+				   alt="Rekon night"/> 
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<img class="crop-img" 
+				  src="F:\Project Github\Web page for Motorcycle\Img 9.jpg" 
+				  alt="Master 234"/> 
+			</div>
+			<div class="col-md-3">
+				<img class="crop-img" 
+				  src="F:\Project Github\Web page for Motorcycle\Img 10.jpg" 
+				  alt="Mer 34"/> 
+			</div>
+			<div class="col-md-3">
+				<img class="crop-img" 
+				  src="F:\Project Github\Web page for Motorcycle\Img 11.jpg" 
+				  alt="Cry 67"/> 
+			</div>
+			<div class="col-md-3">
+				<img class="crop-img" 
+				   src="F:\Project Github\Web page for Motorcycle\Img 12.jpg" 
+				   alt="Rekon night 125"/> 
+			</div>
+		</div>
+		<!--
+			this is the large image which is
+			on a row of its own. 
+			I will change it source in the 
+			javascript
+		-->
+		<div class="row">
+			<div class="col-md-12">
+				<img id="bigImage" 
+				  class="large-img" 
+				  src="F:\Project Github\Web page for Motorcycle\Img 9.jpg" 
+				  alt="Renold Buster" width="300px" height="300px" alignment="laid"/> 
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// when we click on the thumbnail
+		// we set the src attribute of the 
+		// big image to be the same as the 
+		// src of the image we have clicked on
+		// ("this"). This loads the same
+		// image file into the big image
+		$(".crop-img").click(function(){
+			$("#bigImage").attr('src', 
+				$(this).attr('src'));
+		});
+	</script>
+
+	</body>
+</html>
+
+
+
+
+
+
+
